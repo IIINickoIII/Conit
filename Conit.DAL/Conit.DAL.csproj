@@ -70,17 +70,24 @@
     <Compile Include="Identity\ApplicationRoleManager.cs" />
     <Compile Include="Identity\ApplicationUserManager.cs" />
     <Compile Include="Identity\ClientManager.cs" />
-    <Compile Include="Interfaces\IClientManager.cs" />
-    <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Interfaces\IEditRepository.cs" />
+    <Compile Include="Interfaces\IReadRepository.cs" />
+    <Compile Include="Interfaces\IUnitOfWork.cs" />
+    <Compile Include="Interfaces\Special\ClientManager.cs" />
+    <Compile Include="Interfaces\Special\ICompanyRepository.cs" />
+    <Compile Include="Interfaces\Special\IInstructionPageRepository.cs" />
+    <Compile Include="Interfaces\Special\IInstructionRepository.cs" />
+    <Compile Include="Interfaces\Special\IPartProductRepository.cs" />
+    <Compile Include="Interfaces\Special\IPartRepository.cs" />
+    <Compile Include="Interfaces\Special\IProductRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\EditRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

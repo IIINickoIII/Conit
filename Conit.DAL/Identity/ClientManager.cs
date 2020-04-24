@@ -1,6 +1,6 @@
 ﻿using Conit.DAL.Contexts;
 using Conit.DAL.Entities.Identity;
-using Conit.DAL.Interfaces;
+using Conit.DAL.Interfaces.Special;
 
 namespace Conit.DAL.Identity
 {
