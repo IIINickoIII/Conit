@@ -80,6 +80,11 @@
     <Compile Include="Interfaces\Special\IPartProductRepository.cs" />
     <Compile Include="Interfaces\Special\IPartRepository.cs" />
     <Compile Include="Interfaces\Special\IProductRepository.cs" />
+    <Compile Include="Migrations\202004260844352_InitialDatabaseModel.cs" />
+    <Compile Include="Migrations\202004260844352_InitialDatabaseModel.designer.cs">
+      <DependentUpon>202004260844352_InitialDatabaseModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\EditRepository.cs" />
     <Compile Include="Repositories\Special\CompanyRepository.cs" />
@@ -94,7 +99,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202004260844352_InitialDatabaseModel.resx">
+      <DependentUpon>202004260844352_InitialDatabaseModel.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

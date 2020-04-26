@@ -7,7 +7,7 @@ namespace Conit.DAL.Contexts
 {
     public class ApplicationContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationContext() : base("RentalContext") { }
+        public ApplicationContext() : base("ConitConnection") { }
 
         public ApplicationContext(string conectionString) : base(conectionString) { }
 
