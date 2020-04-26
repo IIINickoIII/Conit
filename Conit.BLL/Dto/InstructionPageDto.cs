@@ -6,11 +6,11 @@
 
         public int InstructionId { get; set; }
 
-        public InstructionDto Instruction { get; set; }
+        public InstructionDto InstructionDto { get; set; }
 
         public int PartId { get; set; }
 
-        public PartDto Part { get; set; }
+        public PartDto PartDto { get; set; }
 
         public int PageNumber { get; set; }
 

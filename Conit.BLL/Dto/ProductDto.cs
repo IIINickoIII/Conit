@@ -10,7 +10,7 @@
 
         public int CompanyId { get; set; }
 
-        public CompanyDto Company { get; set; }
+        public CompanyDto CompanyDto { get; set; }
 
         public string Category { get; set; }
 

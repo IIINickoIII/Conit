@@ -72,7 +72,22 @@
     <Compile Include="Dto\ProductDto.cs" />
     <Compile Include="Dto\RoleDto.cs" />
     <Compile Include="Dto\UserDto.cs" />
+    <Compile Include="Infrastructure\MappingProfileBll.cs" />
+    <Compile Include="Infrastructure\ServiceModule.cs" />
+    <Compile Include="Infrastructure\UserServiceCreator.cs" />
+    <Compile Include="Interfaces\ICompanyService.cs" />
+    <Compile Include="Interfaces\IInstructionPageService.cs" />
+    <Compile Include="Interfaces\IInstructionService.cs" />
+    <Compile Include="Interfaces\IPartProductService.cs" />
+    <Compile Include="Interfaces\IPartService.cs" />
+    <Compile Include="Interfaces\IProductService.cs" />
+    <Compile Include="Interfaces\IUserService.cs" />
+    <Compile Include="Interfaces\IUserServiceCreator.cs" />
+    <Compile Include="Models\OperationDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CompanyService.cs" />
+    <Compile Include="Services\InstructionPageService.cs" />
+    <Compile Include="Services\UserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

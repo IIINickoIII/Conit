@@ -8,11 +8,11 @@ namespace Conit.BLL.Dto
 
         public int ProductId { get; set; }
 
-        public ProductDto Product { get; set; }
+        public ProductDto ProductDto { get; set; }
 
         public int PartId { get; set; }
 
-        public PartDto Part { get; set; }
+        public PartDto PartDto { get; set; }
 
         public DateTime DateOfAdding { get; set; }
 
