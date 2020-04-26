@@ -73,7 +73,7 @@
     <Compile Include="Interfaces\IEditRepository.cs" />
     <Compile Include="Interfaces\IReadRepository.cs" />
     <Compile Include="Interfaces\IUnitOfWork.cs" />
-    <Compile Include="Interfaces\Special\ClientManager.cs" />
+    <Compile Include="Interfaces\Special\IClientManager.cs" />
     <Compile Include="Interfaces\Special\ICompanyRepository.cs" />
     <Compile Include="Interfaces\Special\IInstructionPageRepository.cs" />
     <Compile Include="Interfaces\Special\IInstructionRepository.cs" />
@@ -82,6 +82,13 @@
     <Compile Include="Interfaces\Special\IProductRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\EditRepository.cs" />
+    <Compile Include="Repositories\Special\CompanyRepository.cs" />
+    <Compile Include="Repositories\Special\InstructionPageRepository.cs" />
+    <Compile Include="Repositories\Special\InstructionRepository.cs" />
+    <Compile Include="Repositories\Special\PartProductRepository.cs" />
+    <Compile Include="Repositories\Special\PartRepository.cs" />
+    <Compile Include="Repositories\Special\ProductRepository.cs" />
+    <Compile Include="Repositories\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
