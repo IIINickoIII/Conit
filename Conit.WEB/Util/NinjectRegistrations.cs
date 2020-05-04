@@ -1,4 +1,6 @@
-﻿using Ninject.Modules;
+﻿using Conit.BLL.Interfaces;
+using Conit.BLL.Services;
+using Ninject.Modules;
 
 namespace Conit.WEB.Util
 {
@@ -6,7 +8,7 @@ namespace Conit.WEB.Util
     {
         public override void Load()
         {
-
+            Bind<ICompanyService>().To<CompanyService>();
         }
     }
 }

@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Conit.DAL.Entities.Company">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAgQAQAAAAAABAAAAAABQAAAAA=</HashCode>
+      <FileName>Entities\Company.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.DAL.Entities.Instruction">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Entities\Instruction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.DAL.Entities.InstructionPage">
+    <Position X="4" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BACCAAAAIAAAAAAAAAAAAAAAAAAIABAAAgAAAQAAAAA=</HashCode>
+      <FileName>Entities\InstructionPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.DAL.Entities.Part">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEACAAAABAAgAAAAAAAAAERAACAAABAAAAAAgQAAAAA=</HashCode>
+      <FileName>Entities\Part.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.DAL.Entities.PartProduct">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAACAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Entities\PartProduct.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.DAL.Entities.Product">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAIgAAAAAAAAAAQAAAAAABAAAAAABQAACAA=</HashCode>
+      <FileName>Entities\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.DAL.Repositories.Special.CompanyRepository">
+    <Position X="17" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAABAAACAAICAgAAgAAAAAAAAA=</HashCode>
+      <FileName>Repositories\Special\CompanyRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Conit.DAL.Repositories.Special.InstructionPageRepository">
+    <Position X="17.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAABAAACAAIAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Repositories\Special\InstructionPageRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Conit.DAL.Entities.Identity.ApplicationRole">
+    <Position X="0.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Identity\ApplicationRole.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.DAL.Entities.Identity.ApplicationUser">
+    <Position X="2.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Entities\Identity\ApplicationUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.DAL.Entities.Identity.ClientProfile">
+    <Position X="4" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAQAAAAAAQAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Identity\ClientProfile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.DAL.Repositories.Special.InstructionRepository">
+    <Position X="19.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAABAAACAAIAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Repositories\Special\InstructionRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Conit.DAL.Repositories.Special.PartProductRepository">
+    <Position X="15.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAABAAACAAIAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Repositories\Special\PartProductRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Conit.DAL.Repositories.Special.PartRepository">
+    <Position X="19.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAABAAACAAIAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Repositories\Special\PartRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Conit.DAL.Repositories.Special.ProductRepository">
+    <Position X="15.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAABAAACAAIAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Repositories\Special\ProductRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Conit.DAL.Repositories.EditRepository&lt;TEntity&gt;">
+    <Position X="18" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAgAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\EditRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Conit.DAL.Repositories.UnitOfWork">
+    <Position X="21" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAiQYCAAKAAAAAkABAAQAAEAIAoAAAAAAgAAABAAAQ=</HashCode>
+      <FileName>Repositories\UnitOfWork.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Conit.DAL.Contexts.ApplicationContext">
+    <Position X="21" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEABAAAAAAAIAoAAAIAAAAAAAAAAQ=</HashCode>
+      <FileName>Contexts\ApplicationContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Conit.DAL.Interfaces.IUnitOfWork">
+    <Position X="9.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQICAACAAAAAEABAAAAAAAIAoAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Interfaces\IUnitOfWork.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Conit.DAL.Interfaces.IReadRepository&lt;TEntity&gt;">
+    <Position X="11.25" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAABAAAAAAIAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IReadRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Conit.DAL.Interfaces.IEditRepository&lt;TEntity&gt;">
+    <Position X="7.25" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IEditRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Conit.DAL.Interfaces.Special.IClientManager">
+    <Position X="7.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Special\IClientManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Conit.DAL.Interfaces.Special.ICompanyRepository">
+    <Position X="7.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Special\ICompanyRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Conit.DAL.Interfaces.Special.IInstructionPageRepository">
+    <Position X="11.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Special\IInstructionPageRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Conit.DAL.Interfaces.Special.IInstructionRepository">
+    <Position X="9.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Special\IInstructionRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Conit.DAL.Interfaces.Special.IPartProductRepository">
+    <Position X="11.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Special\IPartProductRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Conit.DAL.Interfaces.Special.IPartRepository">
+    <Position X="7.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Special\IPartRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Conit.DAL.Interfaces.Special.IProductRepository">
+    <Position X="9.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Special\IProductRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

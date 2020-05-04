@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Conit.WEB.ViewModels.CompanyViewModel>
+@{
+    ViewBag.Title = "CompaniesReadOnlyList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Companies</h2>
+<table id="companies" class="table table-hover">
+    <thead>
+        <tr scope="row">
+            <th>Photo</th>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var company in Model)
+        {
+            <tr scope="row">
+                <td><img src='@company.PictureId' alt='No image.' class='img-thumbnail-company' /></td>
+                <td>@Html.ActionLink($"{company.Name}", "Details", "Companies", htmlAttributes: null, routeValues: new { companyDtoId = company.Id })</td>
+                <td>@company.ContactName</td>
+                <td>@company.PhoneNumber</td>
+            </tr>
+        }
+    </tbody>
+</table>
+@section scripts{
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#companies').DataTable({
+                columns: [
+                    {
+                        orderable: false
+                    },
+                    {},
+                    {},
+                    {}
+                ]
+            });
+        });
+    </script>
+}

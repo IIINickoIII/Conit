@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Conit.WEB.ViewModels.CompanyViewModel>
+@{
+    ViewBag.Title = "Companies";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Companies</h2>
+<p></p>
+@Html.ActionLink("Add company", "New", "Companies", routeValues: null, htmlAttributes: new { @class = "btn btn-primary btn-sm" })
+<p></p>
+<table id="companies" class="table table-hover">
+    <thead>
+        <tr scope="row">
+            <th>Photo</th>
+            <th>Company</th>
+            <th>Description</th>
+            <th>Contact</th>
+            <th>Phone</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var company in Model)
+        {
+            <tr scope="row">
+                <td><img src='@company.PictureId' alt='No image.' class='img-thumbnail-company' /></td>
+                <td>@Html.ActionLink($"{company.Name}", "Details", "Companies", htmlAttributes: null, routeValues: new { companyDtoId = company.Id })</td>
+                <td>@company.Description</td>
+                <td>@company.ContactName</td>
+                <td>@company.PhoneNumber</td>
+                <td>@Html.ActionLink("Edit", "Edit", "Companies", htmlAttributes: null, routeValues: new { companyDtoId = company.Id })</td>
+                <td>@Html.ActionLink("Delete", "Delete", "Companies", htmlAttributes: null, routeValues: new { companyDtoId = company.Id })</td>
+            </tr>
+        }
+    </tbody>
+</table>
+@section scripts{
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#companies').DataTable({
+                columns: [
+                    {
+                        orderable: false
+                    },
+                    {},
+                    {},
+                    {},
+                    {},
+                    {
+                        orderable: false
+                    },
+                    {
+                        orderable: false
+                    }
+                ]
+            });
+        });
+    </script>
+}
+

@@ -1,10 +1,12 @@
 ﻿using AutoMapper;
 using Conit.BLL.Dto;
 using Conit.BLL.Interfaces;
+using Conit.BLL.Models;
 using Conit.DAL.Entities;
 using Conit.DAL.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Conit.BLL.Services
 {
@@ -21,10 +23,12 @@ namespace Conit.BLL.Services
         {
             if (companyDto == null)
             {
-                throw new ArgumentNullException("compantDto");
+                throw new ArgumentNullException("companyDto");
             }
 
             var company = Mapper.Map<Company>(companyDto);
+
+            company.DateOfAdding = DateTime.Now;
 
             Database.Companies.Add(company);
             Database.Save();
@@ -48,7 +52,7 @@ namespace Conit.BLL.Services
             if (companyDto == null)
             {
                 throw new ArgumentNullException("companyDto");
-            }
+            }           
 
             var company = Mapper.Map<Company>(companyDto);
 
@@ -83,6 +87,45 @@ namespace Conit.BLL.Services
                 Mapper.Map<IEnumerable<CompanyDto>>(companiesInDb);
 
             return companyDtos;
+        }
+
+        public async Task<OperationDetails> AddAsync(CompanyDto companyDto)
+        {
+            Company companyInDb = await Database.Companies.FindByNameAsync(companyDto.Name);
+            if (companyInDb == null)
+            {
+                var company = Mapper.Map<Company>(companyDto);
+
+                company.DateOfAdding = DateTime.Now;
+
+                Database.Companies.Add(company);
+                Database.Save();
+                return new OperationDetails(true, "Company was added.", "");
+            }
+            else
+            {
+                return new OperationDetails(false, "This name is already taken.", "Name");
+            }
+        }
+
+        public async Task<OperationDetails> EditAsync(CompanyDto companyDto)
+        {
+            Company companyInDb = Database.Companies
+                .SingleOrDefault(m => m.Name == companyDto.Name);
+
+            if (companyInDb == null ||
+                (companyInDb != null &&
+                 companyInDb.Id == companyDto.Id))
+            {
+                companyInDb = Mapper.Map<Company>(companyDto);
+
+                await Database.Companies.UpdateAsync(companyInDb);
+
+                Database.Save();
+
+                return new OperationDetails(true, "Company was updated.", "");
+            }
+            return new OperationDetails(false, "This name is already taken.", "Name");
         }
     }
 }

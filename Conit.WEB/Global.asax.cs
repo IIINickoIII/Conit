@@ -1,5 +1,6 @@
 using AutoMapper;
 using Conit.BLL.Infrastructure;
+using Conit.WEB.App_Start;
 using Conit.WEB.Util;
 using Ninject;
 using Ninject.Modules;
@@ -19,6 +20,7 @@ namespace Conit.WEB
             Mapper.Initialize(cfg =>
             {
                 cfg.AddProfile<MappingProfileBll>();
+                cfg.AddProfile<MappingProfileWeb>();
             });
 
             AreaRegistration.RegisterAllAreas();

@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Threading.Tasks;
 
 namespace Conit.DAL.Repositories.Special
 {
@@ -40,6 +41,24 @@ namespace Conit.DAL.Repositories.Special
         {
             return ConitContext.Companies
                     .SingleOrDefault(predicate);
+        }
+
+        public async Task<Company> FindByNameAsync(string companyName)
+        {
+            var company = await ConitContext.Companies
+                .SingleOrDefaultAsync(c => c.Name == companyName);
+
+            return company;
+        }
+
+        public async Task<Company> UpdateAsync(Company company)
+        {
+            using(var context = new ApplicationContext())
+            {
+                context.Entry(company).State = EntityState.Modified;
+                await context.SaveChangesAsync();
+            }
+            return company;
         }
     }
 }

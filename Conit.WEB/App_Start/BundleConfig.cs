@@ -23,7 +23,7 @@ namespace Conit.WEB
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/bootstrap_cerulean.css",
                       "~/Content/site.css"));
         }
     }

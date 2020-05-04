@@ -1,5 +1,7 @@
 ﻿using Conit.BLL.Dto;
+using Conit.BLL.Models;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Conit.BLL.Interfaces
 {
@@ -14,5 +16,9 @@ namespace Conit.BLL.Interfaces
         void Edit(CompanyDto companyDto);
 
         void Delete(int companyDtoId);
+
+        Task<OperationDetails> AddAsync(CompanyDto companyDto);
+
+        Task<OperationDetails> EditAsync(CompanyDto companyDto);
     }
 }
