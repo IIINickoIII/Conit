@@ -15,6 +15,8 @@ namespace Conit.WEB.ViewModels
 
         public Picture Picture { get; set; }
 
+        public string PictureId { get; set; }
+
         [Display(Name = "Company Name")]
         [Required(ErrorMessage = "Please, enter the name")]
         [StringLength(60)]
@@ -24,8 +26,6 @@ namespace Conit.WEB.ViewModels
         [Required(ErrorMessage = "Please, enter the description")]
         [StringLength(255)]
         public string Description { get; set; }
-
-        public string PictureId { get; set; }
 
         [Display(Name = "Phone number")]
         [Required(ErrorMessage = "Please, enter the phone number")]

@@ -188,8 +188,10 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Api\CompaniesController.cs" />
+    <Compile Include="Controllers\Api\PartsController.cs" />
     <Compile Include="Controllers\CompaniesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PartsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -203,6 +205,7 @@
     <Compile Include="ViewModels\Identity\LoginViewModel.cs" />
     <Compile Include="ViewModels\Identity\RegisterViewModel.cs" />
     <Compile Include="ViewModels\Identity\UsersViewModel.cs" />
+    <Compile Include="ViewModels\PartViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-grid.css" />
@@ -351,10 +354,15 @@
     <Content Include="Views\Companies\CompaniesReadOnlyList.cshtml" />
     <Content Include="Views\Companies\CompanyForm.cshtml" />
     <Content Include="Views\Companies\CompanyDetails.cshtml" />
+    <Content Include="Views\Parts\PartsList.cshtml" />
+    <Content Include="Views\Parts\PartsReadOnlyList.cshtml" />
+    <Content Include="Views\Parts\PartDetails.cshtml" />
+    <Content Include="Views\Parts\PartForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Files\Companies\" />
+    <Folder Include="Files\Parts\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

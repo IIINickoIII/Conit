@@ -1,8 +1,8 @@
-﻿@model Conit.WEB.ViewModels.CompanyViewModel
+﻿@model Conit.WEB.ViewModels.PartViewModel
 @{
     if (Model.IsNewCreated)
     {
-        ViewBag.Title = "New Car";
+        ViewBag.Title = "New Part";
     }
     else
     {
@@ -11,13 +11,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <h2>@Model.Title</h2>
-@using (Html.BeginForm("Save", "Companies", FormMethod.Post, new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm("Save", "Parts", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     <div class="form-row">
         <span id="output">
             @if (!Model.IsNewCreated)
             {
-                <img src="@Model.PictureId" class="img-add-company" alt="New Company" />
+                <img src="@Model.PictureId" class="img-add-company" alt="New Part" />
             }
         </span>
     </div>
@@ -39,14 +39,34 @@
         @Html.ValidationMessageFor(c => c.Description)
     </div>
     <div class="form-group">
-        @Html.LabelFor(c => c.PhoneNumber, htmlAttributes: new { @class = "col-form-label col-form-label-sm" })
-        @Html.TextBoxFor(c => c.PhoneNumber, htmlAttributes: new { @class = "form-control form-control-sm" })
-        @Html.ValidationMessageFor(c => c.PhoneNumber)
+        @Html.LabelFor(c => c.Color, htmlAttributes: new { @class = "col-form-label col-form-label-sm" })
+        @Html.TextBoxFor(c => c.Color, htmlAttributes: new { @class = "form-control form-control-sm" })
+        @Html.ValidationMessageFor(c => c.Color)
     </div>
     <div class="form-group">
-        @Html.LabelFor(c => c.ContactName, htmlAttributes: new { @class = "col-form-label col-form-label-sm" })
-        @Html.TextBoxFor(c => c.ContactName, htmlAttributes: new { @class = "form-control form-control-sm" })
-        @Html.ValidationMessageFor(c => c.ContactName)
+        @Html.LabelFor(c => c.Material, htmlAttributes: new { @class = "col-form-label col-form-label-sm" })
+        @Html.TextBoxFor(c => c.Material, htmlAttributes: new { @class = "form-control form-control-sm" })
+        @Html.ValidationMessageFor(c => c.Material)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.Weight, htmlAttributes: new { @class = "col-form-label col-form-label-sm" })
+        @Html.TextBoxFor(c => c.Weight, htmlAttributes: new { @class = "form-control form-control-sm" })
+        @Html.ValidationMessageFor(c => c.Weight)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.Height, htmlAttributes: new { @class = "col-form-label col-form-label-sm" })
+        @Html.TextBoxFor(c => c.Height, htmlAttributes: new { @class = "form-control form-control-sm" })
+        @Html.ValidationMessageFor(c => c.Height)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.Width, htmlAttributes: new { @class = "col-form-label col-form-label-sm" })
+        @Html.TextBoxFor(c => c.Width, htmlAttributes: new { @class = "form-control form-control-sm" })
+        @Html.ValidationMessageFor(c => c.Width)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.Length, htmlAttributes: new { @class = "col-form-label col-form-label-sm" })
+        @Html.TextBoxFor(c => c.Length, htmlAttributes: new { @class = "form-control form-control-sm" })
+        @Html.ValidationMessageFor(c => c.Length)
     </div>
     @Html.HiddenFor(c => c.Id)
     @Html.HiddenFor(c => c.PictureId)

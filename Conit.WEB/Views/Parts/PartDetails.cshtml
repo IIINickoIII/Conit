@@ -1,0 +1,23 @@
+﻿@model Conit.WEB.ViewModels.PartViewModel
+@{
+    ViewBag.Title = Model.Name;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>@Model.Name</h2>
+<div class="form-row">
+    <span id="output">
+        @if (!Model.IsNewCreated)
+        {
+            <img src="@Model.PictureId" class="img-add-company" alt="@Model.Name" />
+        }
+    </span>
+</div>
+<div>
+    <h4>@Model.Description</h4>
+    <h5>@Model.Color</h5>
+    <h5>@Model.Material</h5>
+    <h5>@Model.Weight</h5>
+    <h5>@Model.Height</h5>
+    <h5>@Model.Width</h5>
+    <h5>@Model.Length</h5>  
+</div>

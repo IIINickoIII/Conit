@@ -24,7 +24,7 @@ namespace Conit.DAL.Entities
 
         public DateTime DateOfAdding { get; set; }
 
-        public int PictureId { get; set; }
+        public string PictureId { get; set; }
 
         public bool IsDeleted { get; set; }
     }

@@ -9,6 +9,8 @@ namespace Conit.WEB.App_Start
         public MappingProfileWeb()
         {
             Mapper.CreateMap<CompanyDto, CompanyViewModel>().ReverseMap();
+
+            Mapper.CreateMap<PartDto, PartViewModel>().ReverseMap();
         }
     }
 }

@@ -1,26 +1,28 @@
-﻿@model IEnumerable<Conit.WEB.ViewModels.CompanyViewModel>
+﻿@model IEnumerable<Conit.WEB.ViewModels.PartViewModel>
 @{
-    ViewBag.Title = "Companies";
+    ViewBag.Title = "Parts";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>Companies</h2>
-<table id="companies" class="table table-hover">
+<h2>Parts</h2>
+<table id="parts" class="table table-hover">
     <thead>
         <tr scope="row">
-            <th>Photo</th>
-            <th>Company</th>
-            <th>Contact</th>
-            <th>Phone</th>
+            <th>Picture</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Color</th>
+            <th>Material</th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var company in Model)
+        @foreach (var part in Model)
         {
             <tr scope="row">
-                <td><img src='@company.PictureId' alt='No image.' class='img-thumbnail-company' /></td>
-                <td>@Html.ActionLink($"{company.Name}", "Details", "Companies", htmlAttributes: null, routeValues: new { companyDtoId = company.Id })</td>
-                <td>@company.ContactName</td>
-                <td>@company.PhoneNumber</td>
+                <td><img src='@part.PictureId' alt='No image.' class='img-thumbnail-company' /></td>
+                <td>@Html.ActionLink($"{part.Name}", "Details", "Companies", htmlAttributes: null, routeValues: new { partDtoId = part.Id })</td>
+                <td>@part.Description</td>
+                <td>@part.Color</td>
+                <td>@part.Material</td>
             </tr>
         }
     </tbody>
@@ -30,11 +32,12 @@
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
     <script>
         $(document).ready(function () {
-            $('#companies').DataTable({
+            $('#parts').DataTable({
                 columns: [
                     {
                         orderable: false
                     },
+                    {},
                     {},
                     {},
                     {}
@@ -43,3 +46,4 @@
         });
     </script>
 }
+

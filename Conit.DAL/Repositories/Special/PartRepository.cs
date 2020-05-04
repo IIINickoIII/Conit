@@ -16,7 +16,7 @@ namespace Conit.DAL.Repositories.Special
 
         public ApplicationContext ConitContext
         {
-            get { return ConitContext; }
+            get { return Context as ApplicationContext; }
         }
 
         public IEnumerable<Part> Find(Expression<Func<Part, bool>> predicate)
