@@ -1,0 +1,68 @@
+﻿@model Conit.WEB.ViewModels.Identity.UsersViewModel
+@using Conit.WEB.Models
+@{
+    ViewBag.Title = "Users";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Users</h2>
+@if (User.Identity.IsAuthenticated)
+{
+    <p>Your account: @User.Identity.Name</p>
+}
+<table id="users" class="table table-hover">
+    <thead>
+        <tr scope="row">
+            <th>Email</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Role</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var userDto in Model.UserDtos)
+        {
+            var roleName = @Model.RoleDtos.SingleOrDefault(r => r.Id == userDto.RoleId).Name;
+            <tr>
+                <td>@userDto.Email</td>
+                <td>@userDto.Name</td>
+                <td>@userDto.Address</td>
+                @if (roleName == RoleName.Admin)
+                {
+                    <td><span class="badge badge-success">@roleName</span></td>
+                }
+                else if (roleName == RoleName.Manager)
+                {
+                    <td><span class="badge badge-info">@roleName</span></td>
+                }
+                else if (roleName == RoleName.User)
+                {
+                    <td><span class="badge badge-primary">@roleName</span></td>
+                }
+                else if (roleName == RoleName.Banned)
+                {
+                    <td><span class="badge badge-danger">@roleName</span></td>
+                }
+                <td>@Html.ActionLink("Details", "GetUser", "Account", routeValues: new { @userId = userDto.Id }, htmlAttributes: null)</td>
+            </tr>
+        }
+    </tbody>
+</table>
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $('#users').DataTable({
+                columns: [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {
+                        orderable: false
+                    }
+                ]
+            });
+        });
+    </script>
+}

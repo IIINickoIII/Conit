@@ -41,7 +41,7 @@ namespace Conit.WEB.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(LoginViewModel model)
         {
-            await SetInitialDataAsync();
+            //await SetInitialDataAsync();
             if (ModelState.IsValid)
             {
                 UserDto userDto = new UserDto { Email = model.Email, Password = model.Password };
@@ -78,7 +78,7 @@ namespace Conit.WEB.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
-            await SetInitialDataAsync();
+            //await SetInitialDataAsync();
             if (ModelState.IsValid)
             {
                 UserDto userDto = new UserDto
@@ -179,8 +179,8 @@ namespace Conit.WEB.Controllers
                 {
                     new UserDto
                     {
-                        Email = "admin@carrental.com",
-                        UserName = "admin@carrental.com",
+                        Email = "admin@conit.com",
+                        UserName = "admin@conit.com",
                         Password = "123456",
                         Name = "Nicko",
                         Address = "Ukraine, Kharkov, 23 Serpnya st., 43",
@@ -188,8 +188,8 @@ namespace Conit.WEB.Controllers
                     },
                     new UserDto
                     {
-                        Email = "manager@carrental.com",
-                        UserName = "manager@carrental.com",
+                        Email = "manager@conit.com",
+                        UserName = "manager@conit.com",
                         Password = "123456",
                         Name = "Alex",
                         Address = "Ukraine, Kharkov, Heroiv Pratsi, 7",
@@ -197,19 +197,29 @@ namespace Conit.WEB.Controllers
                     },
                     new UserDto
                     {
-                        Email = "user@carrental.com",
-                        UserName = "user@carrental.com",
+                        Email = "user@conit.com",
+                        UserName = "user@conit.com",
                         Password = "123456",
                         Name = "John",
                         Address = "Ukraine, Kharkov, 23 Serpnya st., 44",
                         RoleId = RoleName.User,
+                    },
+                    new UserDto
+                    {
+                        Email = "banneduser@conit.com",
+                        UserName = "banneduser@conit.com",
+                        Password = "123456",
+                        Name = "John",
+                        Address = "Ukraine, Kharkov, 23 Serpnya st., 44",
+                        RoleId = RoleName.Banned,
                     }
                 },
                 new List<string>
                 {
                     "Admin",
                     "Manager",
-                    "User"
+                    "User",
+                    "Banned"
                 });
         }
     }

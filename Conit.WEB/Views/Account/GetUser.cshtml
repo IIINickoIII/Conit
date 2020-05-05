@@ -1,0 +1,32 @@
+﻿@model Conit.WEB.ViewModels.Identity.ChangeRoleViewModel
+@using Conit.WEB.Models
+@{
+    ViewBag.Title = "GetUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var roleName = Model.roleDtos.SingleOrDefault(r => r.Id == Model.userDto.RoleId).Name;
+    var roles = Model.roleDtos.Where(r => r.Name != RoleName.Admin);
+}
+<h2>GetUser</h2>
+<p>@Model.userDto.Email</p>
+<p>@Model.userDto.Name</p>
+<p>@Model.userDto.Address</p>
+@if (User.IsInRole(RoleName.Admin))
+{
+    if (roleName == RoleName.Admin)
+    {
+        <p><span class="badge badge-success">You are the only one Administrator!</span></p>
+    }
+    else
+    {
+        using (Html.BeginForm("ChangeRole", "Account", FormMethod.Post))
+        {
+            @Html.HiddenFor(u => u.userDto.Id)
+            @Html.AntiForgeryToken()
+            <div class="form-group">
+                @Html.Label("Role", htmlAttributes: new { @class = "col-form-label col-form-label-sm" })
+                @Html.DropDownListFor(u => u.userDto.RoleId, new SelectList(roles, "Id", "Name"), htmlAttributes: new { @class = "form-control form-control-sm" })
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+        }
+    }
+}

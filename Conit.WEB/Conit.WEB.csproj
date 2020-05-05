@@ -358,6 +358,8 @@
     <Content Include="Views\Parts\PartsReadOnlyList.cshtml" />
     <Content Include="Views\Parts\PartDetails.cshtml" />
     <Content Include="Views\Parts\PartForm.cshtml" />
+    <Content Include="Views\Account\GetUser.cshtml" />
+    <Content Include="Views\Account\GetUsers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
