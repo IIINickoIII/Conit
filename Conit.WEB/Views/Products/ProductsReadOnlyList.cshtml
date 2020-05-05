@@ -24,7 +24,7 @@
             <tr scope="row">
                 <td><img src='@product.PictureId' alt='No image.' class='img-thumbnail-company' /></td>
                 <td>@Html.ActionLink($"{product.CompanyDto.Name}", "Details", "Companies", htmlAttributes: null, routeValues: new { companyDtoId = product.CompanyDto.Id })</td>
-                <td>@Html.ActionLink($"{product.Name}", "Details", "Companies", htmlAttributes: null, routeValues: new { partDtoId = product.Id })</td>
+                <td>@Html.ActionLink($"{product.Name}", "Details", "Products", htmlAttributes: null, routeValues: new { productDtoId = product.Id })</td>
                 <td>@product.Description</td>
             </tr>
         }

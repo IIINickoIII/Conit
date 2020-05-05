@@ -118,6 +118,9 @@ namespace Conit.WEB.Controllers
 
             var productViewModel = Mapper.Map<ProductViewModel>(productDto);
 
+            productViewModel.CompanyDtos =
+                (List<CompanyDto>)companyService.GetAll();
+
             return View("ProductForm", productViewModel);
         }
 

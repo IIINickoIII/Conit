@@ -29,8 +29,7 @@ namespace Conit.WEB.ViewModels
         public string Description { get; set; }
 
         [Display(Name = "Company")]
-        [Required(ErrorMessage = "Please, choose the company")]
-        [StringLength(80)]
+        [Required(ErrorMessage = "Please, select the company")]
         public int CompanyId { get; set; }
 
         public CompanyDto CompanyDto { get; set; }

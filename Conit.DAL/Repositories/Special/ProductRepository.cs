@@ -32,7 +32,7 @@ namespace Conit.DAL.Repositories.Special
 
         public IEnumerable<Product> GetAll()
         {
-            return ConitContext.Products;
+            return ConitContext.Products.Include(c => c.Company);
         }
 
         public Product SingleOrDefault(Expression<Func<Product, bool>> predicate)
