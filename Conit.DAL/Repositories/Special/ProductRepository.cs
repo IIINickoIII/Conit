@@ -27,6 +27,7 @@ namespace Conit.DAL.Repositories.Special
         public Product Get(int id)
         {
             return ConitContext.Products
+                    .Include(p => p.Company)
                     .SingleOrDefault(p => p.Id == id);
         }
 

@@ -1,9 +1,10 @@
 ﻿@model Conit.WEB.ViewModels.ProductViewModel
 @{
-    ViewBag.Title = Model.CompanyDto.Name + Model.Name;
+    string title = $"{Model.CompanyDto.Name} {Model.Name}";
+    ViewBag.Title = title;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>@Model.CompanyDto.Name @Model.Name</h2>
+<h2>@title</h2>
 <div class="form-row">
     <span id="output">
         @if (!Model.IsNewCreated)
