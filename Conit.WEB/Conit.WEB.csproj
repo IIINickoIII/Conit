@@ -192,6 +192,7 @@
     <Compile Include="Controllers\CompaniesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PartsController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -206,6 +207,7 @@
     <Compile Include="ViewModels\Identity\RegisterViewModel.cs" />
     <Compile Include="ViewModels\Identity\UsersViewModel.cs" />
     <Compile Include="ViewModels\PartViewModel.cs" />
+    <Compile Include="ViewModels\ProductViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-grid.css" />
@@ -365,6 +367,8 @@
     <Folder Include="App_Data\" />
     <Folder Include="Files\Companies\" />
     <Folder Include="Files\Parts\" />
+    <Folder Include="Files\Products\" />
+    <Folder Include="Views\Products\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

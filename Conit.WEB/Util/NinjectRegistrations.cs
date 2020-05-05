@@ -9,7 +9,10 @@ namespace Conit.WEB.Util
         public override void Load()
         {
             Bind<ICompanyService>().To<CompanyService>();
+
             Bind<IPartService>().To<PartService>();
+
+            Bind<IProductService>().To<ProductService>();
         }
     }
 }
