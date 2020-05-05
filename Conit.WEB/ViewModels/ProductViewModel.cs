@@ -1,5 +1,6 @@
 ﻿using Conit.BLL.Dto;
 using Conit.WEB.Models;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Conit.WEB.ViewModels
@@ -33,6 +34,8 @@ namespace Conit.WEB.ViewModels
         public int CompanyId { get; set; }
 
         public CompanyDto CompanyDto { get; set; }
+
+        public List<CompanyDto> CompanyDtos { get; set; }
 
         [Display(Name = "Category")]
         [Required(ErrorMessage = "Please, enter the product gategory")]

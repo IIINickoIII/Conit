@@ -189,6 +189,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Api\CompaniesController.cs" />
     <Compile Include="Controllers\Api\PartsController.cs" />
+    <Compile Include="Controllers\Api\ProductsController.cs" />
     <Compile Include="Controllers\CompaniesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PartsController.cs" />
@@ -362,13 +363,16 @@
     <Content Include="Views\Parts\PartForm.cshtml" />
     <Content Include="Views\Account\GetUser.cshtml" />
     <Content Include="Views\Account\GetUsers.cshtml" />
+    <Content Include="Views\Products\ProductDetails.cshtml" />
+    <Content Include="Views\Products\ProductForm.cshtml" />
+    <Content Include="Views\Products\ProductsList.cshtml" />
+    <Content Include="Views\Products\ProductsReadOnlyList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Files\Companies\" />
     <Folder Include="Files\Parts\" />
     <Folder Include="Files\Products\" />
-    <Folder Include="Views\Products\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

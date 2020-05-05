@@ -12,11 +12,14 @@ namespace Conit.WEB.Controllers
     {
         private readonly IProductService productService;
 
+        private readonly ICompanyService companyService;
+
         private FileManager fileManager;
 
-        public ProductsController(IProductService productService)
+        public ProductsController(IProductService productService, ICompanyService companyService)
         {
             this.productService = productService;
+            this.companyService = companyService;
             fileManager = new FileManager();
         }
 
@@ -46,6 +49,9 @@ namespace Conit.WEB.Controllers
         public ActionResult New()
         {
             var productViewModel = new ProductViewModel();
+
+            productViewModel.CompanyDtos = 
+                (List<CompanyDto>)companyService.GetAll();
 
             return View("ProductForm", productViewModel);
         }

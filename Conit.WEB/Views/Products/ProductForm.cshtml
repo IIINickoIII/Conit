@@ -1,23 +1,23 @@
-﻿@model Conit.WEB.ViewModels.PartViewModel
+﻿@model Conit.WEB.ViewModels.ProductViewModel
 @{
     if (Model.IsNewCreated)
     {
-        ViewBag.Title = "New Part";
+        ViewBag.Title = "New Product";
     }
     else
     {
-        ViewBag.Title = $"{Model.Name}";
+        ViewBag.Title = $"{Model.CompanyDto.Name} {Model.Name}";
     }
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <h2>@Model.Title</h2>
-@using (Html.BeginForm("Save", "Parts", FormMethod.Post, new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm("Save", "Products", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     <div class="form-row">
         <span id="output">
             @if (!Model.IsNewCreated)
             {
-                <img src="@Model.PictureId" class="img-add-company" alt="New Part" />
+                <img src="@Model.PictureId" class="img-add-company" alt="New Product" />
             }
         </span>
     </div>
@@ -29,48 +29,27 @@
         <p></p>
     </div>
     <div class="form-group">
+        @Html.LabelFor(c => c.CompanyId, htmlAttributes: new { @class = "col-form-label col-form-label-sm" })
+        @Html.DropDownListFor(c => c.CompanyId, new SelectList(Model.CompanyDtos, "Id", "Name"), "Select company", htmlAttributes: new { @class = "form-control form-control-sm" })
+        @Html.ValidationMessageFor(c => c.CompanyId)
+    </div>
+    <div class="form-group">
         @Html.LabelFor(c => c.Name, htmlAttributes: new { @class = "col-form-label col-form-label-sm" })
         @Html.TextBoxFor(c => c.Name, htmlAttributes: new { @class = "form-control form-control-sm" })
         @Html.ValidationMessageFor(c => c.Name)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.Category, htmlAttributes: new { @class = "col-form-label col-form-label-sm" })
+        @Html.TextBoxFor(c => c.Category, htmlAttributes: new { @class = "form-control form-control-sm" })
+        @Html.ValidationMessageFor(c => c.Category)
     </div>
     <div class="form-group">
         @Html.LabelFor(c => c.Description, htmlAttributes: new { @class = "col-form-label col-form-label-sm" })
         @Html.TextAreaFor(c => c.Description, htmlAttributes: new { @class = "form-control form-control-sm" })
         @Html.ValidationMessageFor(c => c.Description)
     </div>
-    <div class="form-group">
-        @Html.LabelFor(c => c.Color, htmlAttributes: new { @class = "col-form-label col-form-label-sm" })
-        @Html.TextBoxFor(c => c.Color, htmlAttributes: new { @class = "form-control form-control-sm" })
-        @Html.ValidationMessageFor(c => c.Color)
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(c => c.Material, htmlAttributes: new { @class = "col-form-label col-form-label-sm" })
-        @Html.TextBoxFor(c => c.Material, htmlAttributes: new { @class = "form-control form-control-sm" })
-        @Html.ValidationMessageFor(c => c.Material)
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(c => c.Weight, htmlAttributes: new { @class = "col-form-label col-form-label-sm" })
-        @Html.TextBoxFor(c => c.Weight, htmlAttributes: new { @class = "form-control form-control-sm" })
-        @Html.ValidationMessageFor(c => c.Weight)
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(c => c.Height, htmlAttributes: new { @class = "col-form-label col-form-label-sm" })
-        @Html.TextBoxFor(c => c.Height, htmlAttributes: new { @class = "form-control form-control-sm" })
-        @Html.ValidationMessageFor(c => c.Height)
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(c => c.Width, htmlAttributes: new { @class = "col-form-label col-form-label-sm" })
-        @Html.TextBoxFor(c => c.Width, htmlAttributes: new { @class = "form-control form-control-sm" })
-        @Html.ValidationMessageFor(c => c.Width)
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(c => c.Length, htmlAttributes: new { @class = "col-form-label col-form-label-sm" })
-        @Html.TextBoxFor(c => c.Length, htmlAttributes: new { @class = "form-control form-control-sm" })
-        @Html.ValidationMessageFor(c => c.Length)
-    </div>
     @Html.HiddenFor(c => c.Id)
     @Html.HiddenFor(c => c.PictureId)
-    @Html.HiddenFor(c => c.DateOfAdding)
     @Html.AntiForgeryToken()
     <button type="submit" class="btn btn-primary">Save</button>
 }

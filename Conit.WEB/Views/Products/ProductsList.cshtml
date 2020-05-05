@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Conit.WEB.ViewModels.ProductViewModel>
+@{
+    ViewBag.Title = "Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Products</h2>
+<p></p>
+@Html.ActionLink("Add product", "New", "Products", routeValues: null, htmlAttributes: new { @class = "btn btn-primary btn-sm" })
+<p></p>
+<table id="products" class="table table-hover">
+    <thead>
+        <tr scope="row">
+            <th>Picture</th>
+            <th>Company</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr scope="row">
+                <td><img src='@product.PictureId' alt='No image.' class='img-thumbnail-company' /></td>
+                <td>@Html.ActionLink($"{product.CompanyDto.Name}", "Details", "Companies", htmlAttributes: null, routeValues: new { companyDtoId = product.CompanyDto.Id })</td>
+                <td>@Html.ActionLink($"{product.Name}", "Details", "Companies", htmlAttributes: null, routeValues: new { partDtoId = product.Id })</td>
+                <td>@product.Description</td>
+                <td>@Html.ActionLink("Edit", "Edit", "Parts", htmlAttributes: null, routeValues: new { partDtoId = product.Id })</td>
+                <td>@Html.ActionLink("Delete", "Delete", "Parts", htmlAttributes: null, routeValues: new { partDtoId = product.Id })</td>
+            </tr>
+        }
+    </tbody>
+</table>
+@section scripts{
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#products').DataTable({
+                columns: [
+                    {
+                        orderable: false
+                    },
+                    {},
+                    {},
+                    {},
+                    {
+                        orderable: false
+                    },
+                    {
+                        orderable: false
+                    }
+                ]
+            });
+        });
+    </script>
+}
+

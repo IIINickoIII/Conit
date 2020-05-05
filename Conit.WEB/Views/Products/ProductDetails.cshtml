@@ -1,0 +1,18 @@
+﻿@model Conit.WEB.ViewModels.ProductViewModel
+@{
+    ViewBag.Title = Model.CompanyDto.Name + Model.Name;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>@Model.CompanyDto.Name @Model.Name</h2>
+<div class="form-row">
+    <span id="output">
+        @if (!Model.IsNewCreated)
+        {
+            <img src="@Model.PictureId" class="img-add-company" alt="@Model.Name" />
+        }
+    </span>
+</div>
+<div>
+    <h4>@Model.Description</h4>
+    <h5>@Model.Category</h5>
+</div>
