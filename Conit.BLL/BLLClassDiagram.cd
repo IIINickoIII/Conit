@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Conit.BLL.Dto.ClientProfileDto">
-    <Position X="0.5" Y="4.75" Width="1.5" />
+    <Position X="2.25" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAQAAAAAAQAAAAAAAACAAAAAAAAAAA=</HashCode>
       <FileName>Dto\ClientProfileDto.cs</FileName>
@@ -15,105 +15,182 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Conit.BLL.Dto.InstructionDto">
-    <Position X="4" Y="0.5" Width="1.5" />
+    <Position X="0.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAECAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
       <FileName>Dto\InstructionDto.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Conit.BLL.Dto.InstructionPageDto">
-    <Position X="4" Y="2.75" Width="1.5" />
+    <Position X="4" Y="3.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>BACCAAAAABAAAAAAAAAAAAAABAAAABAAAgAAAQAAAAA=</HashCode>
       <FileName>Dto\InstructionPageDto.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Conit.BLL.Dto.PartDto">
-    <Position X="2.25" Y="3.25" Width="1.5" />
+    <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEACAAAABAAgAAAAAAAAAERAACAAABAAAAAAgQAAAAA=</HashCode>
       <FileName>Dto\PartDto.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Conit.BLL.Dto.PartProductDto">
-    <Position X="5.75" Y="0.5" Width="1.5" />
+    <Position X="2.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>FAECAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAQAAAAA=</HashCode>
       <FileName>Dto\PartProductDto.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Conit.BLL.Dto.ProductDto">
-    <Position X="0.5" Y="2" Width="1.5" />
+    <Position X="4" Y="0.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAgCAAAAAAIgAAAAAAAAAAQAAAAAABAAAAAAAQAACAA=</HashCode>
       <FileName>Dto\ProductDto.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Conit.BLL.Dto.RoleDto">
-    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Position X="0.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Dto\RoleDto.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Conit.BLL.Dto.UserDto">
-    <Position X="5.75" Y="3" Width="1.5" />
+    <Position X="4" Y="6" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAACAAIAACAAAAAAAAAAAAQAAAAAAAACAQAAAAAAAAA=</HashCode>
       <FileName>Dto\UserDto.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="Conit.BLL.Interfaces.ICompanyService">
-    <Position X="8.5" Y="0.5" Width="1.5" />
+  <Class Name="Conit.BLL.Models.OperationDetails">
+    <Position X="8.75" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAAAAAABAAAAAAAAAAAEAAAACAgAAAAAAAAA=</HashCode>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIQAAAAA=</HashCode>
+      <FileName>Models\OperationDetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.BLL.Infrastructure.MappingProfileBll">
+    <Position X="7" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Infrastructure\MappingProfileBll.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.BLL.Infrastructure.ServiceModule">
+    <Position X="10.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Infrastructure\ServiceModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.BLL.Infrastructure.UserServiceCreator">
+    <Position X="17.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Infrastructure\UserServiceCreator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Conit.BLL.Services.CompanyService">
+    <Position X="19.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAEAAAABAAAAAAAEAAAEAAAgCAgAAAAAAAAA=</HashCode>
+      <FileName>Services\CompanyService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Conit.BLL.Services.InstructionPageService">
+    <Position X="17.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAEAAAABAAAAAAAAAAAEAAAACAgAAAAAAAAA=</HashCode>
+      <FileName>Services\InstructionPageService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Conit.BLL.Services.InstructionService">
+    <Position X="16" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAEAAAABAAAAAAAAAAAEAAAACAgAAAAAAAAA=</HashCode>
+      <FileName>Services\InstructionService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Conit.BLL.Services.PartService">
+    <Position X="16" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAEAAAABAAAAAAAAAAAEAAAACAgAAAAAAAAA=</HashCode>
+      <FileName>Services\PartService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Conit.BLL.Services.ProductService">
+    <Position X="17.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAEAAAABAAAAAAAAAAAEAAAACAgAAAAAAAAA=</HashCode>
+      <FileName>Services\ProductService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Conit.BLL.Services.UserService">
+    <Position X="19.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAGAAAAABAAAAgAIAAAAAAEAAEAAAYAEAAAA=</HashCode>
+      <FileName>Services\UserService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Conit.BLL.Interfaces.ICompanyService">
+    <Position X="0.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAABAAAAAAAEAAAEAAAgCAgAAAAAAAAA=</HashCode>
       <FileName>Interfaces\ICompanyService.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Conit.BLL.Interfaces.IInstructionPageService">
-    <Position X="10.25" Y="0.5" Width="1.5" />
+    <Position X="2.5" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAABAAAAAAAAAAAEAAAACAgAAAAAAAAA=</HashCode>
       <FileName>Interfaces\IInstructionPageService.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Conit.BLL.Interfaces.IInstructionService">
-    <Position X="12" Y="0.5" Width="1.5" />
+    <Position X="2.5" Y="11" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAABAAAAAAAAAAAEAAAACAgAAAAAAAAA=</HashCode>
       <FileName>Interfaces\IInstructionService.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Conit.BLL.Interfaces.IPartProductService">
-    <Position X="8.5" Y="2.75" Width="1.5" />
+    <Position X="2.5" Y="13" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAABAAAAAAAAAAAEAAAACAgAAAAAAAAA=</HashCode>
       <FileName>Interfaces\IPartProductService.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Conit.BLL.Interfaces.IPartService">
-    <Position X="10.25" Y="2.75" Width="1.5" />
+    <Position X="4.25" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAABAAAAAAAAAAAEAAAACAgAAAAAAAAA=</HashCode>
       <FileName>Interfaces\IPartService.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Conit.BLL.Interfaces.IProductService">
-    <Position X="12" Y="2.75" Width="1.5" />
+    <Position X="4.25" Y="11" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAABAAAAAAAAAAAEAAAACAgAAAAAAAAA=</HashCode>
       <FileName>Interfaces\IProductService.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Conit.BLL.Interfaces.IUserService">
-    <Position X="13.75" Y="0.5" Width="1.5" />
+    <Position X="0.75" Y="11.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAEAAAAAAAABAAAAgAIAAAAAAEAAEAAAYAEAAAA=</HashCode>
       <FileName>Interfaces\IUserService.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Conit.BLL.Interfaces.IUserServiceCreator">
-    <Position X="13.75" Y="3.5" Width="1.5" />
+    <Position X="4.25" Y="13.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>Interfaces\IUserServiceCreator.cs</FileName>

@@ -25,6 +25,9 @@
                 <li class="nav-item @((ViewContext.RouteData.Values["Action"].ToString() == "Index" & ViewContext.RouteData.Values["Controller"].ToString() == "Products") ? "active" : "")">
                     @Html.ActionLink("Products", "Index", "Products", routeValues: null, htmlAttributes: new { @class = "nav-link" })
                 </li>
+                <li class="nav-item @((ViewContext.RouteData.Values["Action"].ToString() == "Index" & ViewContext.RouteData.Values["Controller"].ToString() == "Instructions") ? "active" : "")">
+                    @Html.ActionLink("Instructions", "Index", "Instructions", routeValues: null, htmlAttributes: new { @class = "nav-link" })
+                </li>
                 <li class="nav-item @((ViewContext.RouteData.Values["Action"].ToString() == "Index" & ViewContext.RouteData.Values["Controller"].ToString() == "Parts") ? "active" : "")">
                     @Html.ActionLink("Parts", "Index", "Parts", routeValues: null, htmlAttributes: new { @class = "nav-link" })
                 </li>
@@ -50,7 +53,7 @@
                             @Html.ActionLink("Administrating", "GetUsers", "Account", routeValues: null, htmlAttributes: new { @class = "nav-link" })
                         </li>
                     }
-                    if (User.IsInRole(RoleName.Admin) || User.IsInRole(RoleName.Manager))
+                    @*if (User.IsInRole(RoleName.Admin) || User.IsInRole(RoleName.Manager))
                     {
                         <li class="nav-item @((ViewContext.RouteData.Values["Action"].ToString() == "AllAgreements" & ViewContext.RouteData.Values["Controller"].ToString() == "Management") ? "active" : "")">
                             @Html.ActionLink("Management", "AllAgreements", "Management", routeValues: null, htmlAttributes: new { @class = "nav-link" })
@@ -58,7 +61,7 @@
                     }
                     <li class="nav-item @((ViewContext.RouteData.Values["Action"].ToString() == "MyAgreements" & ViewContext.RouteData.Values["Controller"].ToString() == "Home") ? "active" : "")">
                         @Html.ActionLink("My rents", "MyAgreements", "Home", routeValues: null, htmlAttributes: new { @class = "nav-link" })
-                    </li>
+                    </li>*@
                     <li class="nav-item">
                         @Html.ActionLink("Sign out", "Logout", "Account", routeValues: null, htmlAttributes: new { @class = "nav-link" })
                     </li>

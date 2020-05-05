@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Conit.WEB.ViewModels.InstructionViewModel>
+@{
+    ViewBag.Title = "Instructions";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Instructions</h2>
+<table id="instructions" class="table table-hover">
+    <thead>
+        <tr scope="row">
+            <th>Picture</th>
+            <th>Company</th>
+            <th>Product</th>
+            <th>Instruction</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var instruction in Model)
+        {
+            <tr scope="row">
+                <td><img src='@instruction.ProductDto.PictureId' alt='No image.' class='img-thumbnail-company' /></td>
+                <td>@Html.ActionLink($"{instruction.ProductDto.CompanyDto.Name}", "Details", "Companies", htmlAttributes: null, routeValues: new { companyDtoId = instruction.ProductDto.CompanyDto.Id })</td>
+                <td>@Html.ActionLink($"{instruction.ProductDto.Name}", "Details", "Products", htmlAttributes: null, routeValues: new { productDtoId = instruction.ProductDto.Id })</td>
+                <td>@Html.ActionLink("Instruction", "Details", "Instructions", htmlAttributes: null, routeValues: new { productDtoId = instruction.ProductDto.Id })</td>
+            </tr>
+        }
+    </tbody>
+</table>
+@section scripts{
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#instructions').DataTable({
+                columns: [
+                    {
+                        orderable: false
+                    },
+                    {},
+                    {},
+                    {
+                        orderable: false
+                    }
+                ]
+            });
+        });
+    </script>
+}
+

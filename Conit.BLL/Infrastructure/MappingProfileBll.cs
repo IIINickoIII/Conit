@@ -30,6 +30,7 @@ namespace Conit.BLL.Infrastructure
 
             Mapper.CreateMap<InstructionPage, InstructionPageDto>()
                 .ForMember(i => i.InstructionDto, opt => opt.MapFrom(src => src.Instruction))
+                .ForMember(i => i.PartDto, opt => opt.MapFrom(src => src.Part))
                 .ReverseMap();
 
             Mapper.CreateMap<Part, PartDto>()

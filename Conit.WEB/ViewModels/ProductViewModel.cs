@@ -34,7 +34,7 @@ namespace Conit.WEB.ViewModels
 
         public CompanyDto CompanyDto { get; set; }
 
-        public List<CompanyDto> CompanyDtos { get; set; }
+        public IEnumerable<CompanyDto> CompanyDtos { get; set; }
 
         [Display(Name = "Category")]
         [Required(ErrorMessage = "Please, enter the product gategory")]

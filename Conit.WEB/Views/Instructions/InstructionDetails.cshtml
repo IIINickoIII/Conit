@@ -1,0 +1,68 @@
+﻿@model Conit.WEB.ViewModels.InstructionViewModel
+@{
+    string title = $"{Model.ProductDto.CompanyDto.Name} {Model.ProductDto.Name} Instruction";
+    ViewBag.Title = title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>@title</h2>
+<div class="form-row">
+    <span id="output">
+        @if (!Model.IsNewCreated)
+        {
+            <img src="@Model.ProductDto.PictureId" class="img-add-company" alt="@Model.ProductDto.Name" />
+        }
+    </span>
+</div>
+<div>
+    <h4>@Model.Description</h4>
+    <h5>Pages</h5>
+    <p></p>
+    @Html.ActionLink("Add page", "New", "InstructionPages", routeValues: new { @instructionId = Model.Id }, htmlAttributes: new { @class = "btn btn-primary btn-sm" })
+    <p></p>
+</div>
+<table id="pages" class="table table-hover">
+    <thead>
+        <tr scope="row">
+            <th>Page</th>
+            <th>Picture</th>
+            <th>Detail</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var page in Model.Pages)
+        {
+            <tr scope="row">
+                <td>@page.PageNumber</td>
+                <td><img src='@page.PictureId' alt='No image.' class='img-thumbnail-company' /></td>
+                <td>@Html.ActionLink($"{page.PartDto.Name}", "Details", "Parts", htmlAttributes: null, routeValues: new { partDtoId = page.PartDto.Id })</td>
+                <td>@Html.ActionLink("Edit", "Edit", "InstructionPages", htmlAttributes: null, routeValues: new { instructionPageDtoId = page.Id })</td>
+                <td>@Html.ActionLink("Delete", "Delete", "InstructionPages", htmlAttributes: null, routeValues: new { instructionPageDtoId = page.Id })</td>
+            </tr>
+        }
+    </tbody>
+</table>
+@section scripts{
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#pages').DataTable({
+                columns: [
+                    {
+                        orderable: false
+                    },
+                    {},
+                    {},
+                    {
+                        orderable: false
+                    },
+                    {
+                        orderable: false
+                    }
+                ]
+            });
+        });
+    </script>
+}

@@ -4,11 +4,7 @@ using Conit.BLL.Interfaces;
 using Conit.DAL.Entities;
 using Conit.DAL.Interfaces;
 using System;
-using System.CodeDom;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Conit.BLL.Services
 {
@@ -38,7 +34,7 @@ namespace Conit.BLL.Services
 
         public void Delete(int instructionDtoId)
         {
-            var instructionInDb = 
+            var instructionInDb =
                 Database.Instructions.Get(instructionDtoId);
 
             if (instructionInDb == null)

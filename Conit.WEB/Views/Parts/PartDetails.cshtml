@@ -13,11 +13,18 @@
     </span>
 </div>
 <div>
+    @Html.LabelFor(p => p.Description)
     <h4>@Model.Description</h4>
+    @Html.LabelFor(p => p.Color)
     <h5>@Model.Color</h5>
+    @Html.LabelFor(p => p.Material)
     <h5>@Model.Material</h5>
+    @Html.LabelFor(p => p.Weight)
     <h5>@Model.Weight</h5>
+    @Html.LabelFor(p => p.Height)
     <h5>@Model.Height</h5>
+    @Html.LabelFor(p => p.Width)
     <h5>@Model.Width</h5>
-    <h5>@Model.Length</h5>  
+    @Html.LabelFor(p => p.Length)
+    <h5>@Model.Length</h5>
 </div>

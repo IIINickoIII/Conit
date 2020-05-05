@@ -28,12 +28,16 @@ namespace Conit.DAL.Repositories.Special
         public Instruction Get(int id)
         {
             return ConitContext.Instructions
+                    .Include(i => i.Product)
+                    .Include(i => i.Product.Company)
                     .SingleOrDefault(i => i.Id == id);
         }
 
         public IEnumerable<Instruction> GetAll()
         {
-            return ConitContext.Instructions;
+            return ConitContext.Instructions
+                    .Include(i => i.Product)
+                    .Include(i => i.Product.Company);
         }
 
         public Instruction SingleOrDefault(Expression<Func<Instruction, bool>> predicate)

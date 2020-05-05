@@ -5,6 +5,7 @@ using Conit.DAL.Entities;
 using Conit.DAL.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Conit.BLL.Services
 {
@@ -77,6 +78,23 @@ namespace Conit.BLL.Services
         public IEnumerable<InstructionPageDto> GetAll()
         {
             var instructionPagesInDb = Database.InstructionPages.GetAll();
+
+            if (instructionPagesInDb == null)
+            {
+                throw new Exception("No records in InstructionPages Table.");
+            }
+
+            var instructionPageDtos =
+                Mapper.Map<IEnumerable<InstructionPageDto>>(instructionPagesInDb);
+
+            return instructionPageDtos;
+        }
+
+        public IEnumerable<InstructionPageDto> GetAll(int instructionId)
+        {
+            var instructionPagesInDb = Database.InstructionPages
+                .GetAll()
+                .Where(p => p.InstructionId == instructionId);
 
             if (instructionPagesInDb == null)
             {

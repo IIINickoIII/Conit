@@ -4,11 +4,11 @@
     {
         public int Id { get; set; }
 
-        public int InstructionId { get; set; }
+        public int? InstructionId { get; set; }
 
         public Instruction Instruction { get; set; }
 
-        public int PartId { get; set; }
+        public int? PartId { get; set; }
 
         public Part Part { get; set; }
 

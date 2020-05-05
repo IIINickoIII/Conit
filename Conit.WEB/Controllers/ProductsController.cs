@@ -50,8 +50,7 @@ namespace Conit.WEB.Controllers
         {
             var productViewModel = new ProductViewModel();
 
-            productViewModel.CompanyDtos = 
-                (List<CompanyDto>)companyService.GetAll();
+            productViewModel.CompanyDtos = companyService.GetAll();
 
             return View("ProductForm", productViewModel);
         }
@@ -118,8 +117,7 @@ namespace Conit.WEB.Controllers
 
             var productViewModel = Mapper.Map<ProductViewModel>(productDto);
 
-            productViewModel.CompanyDtos =
-                (List<CompanyDto>)companyService.GetAll();
+            productViewModel.CompanyDtos = companyService.GetAll();
 
             return View("ProductForm", productViewModel);
         }

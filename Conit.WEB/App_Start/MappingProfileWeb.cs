@@ -13,6 +13,10 @@ namespace Conit.WEB.App_Start
             Mapper.CreateMap<PartDto, PartViewModel>().ReverseMap();
 
             Mapper.CreateMap<ProductDto, ProductViewModel>().ReverseMap();
+
+            Mapper.CreateMap<InstructionDto, InstructionViewModel>().ReverseMap();
+
+            Mapper.CreateMap<InstructionPageDto, InstructionPageViewModel>().ReverseMap();
         }
     }
 }

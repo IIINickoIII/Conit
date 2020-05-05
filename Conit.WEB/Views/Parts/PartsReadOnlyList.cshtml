@@ -19,7 +19,7 @@
         {
             <tr scope="row">
                 <td><img src='@part.PictureId' alt='No image.' class='img-thumbnail-company' /></td>
-                <td>@Html.ActionLink($"{part.Name}", "Details", "Companies", htmlAttributes: null, routeValues: new { partDtoId = part.Id })</td>
+                <td>@Html.ActionLink($"{part.Name}", "Details", "Parts", htmlAttributes: null, routeValues: new { partDtoId = part.Id })</td>
                 <td>@part.Description</td>
                 <td>@part.Color</td>
                 <td>@part.Material</td>

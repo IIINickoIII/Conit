@@ -1,0 +1,90 @@
+﻿@model Conit.WEB.ViewModels.InstructionPageViewModel
+@{
+    if (Model.IsNewCreated)
+    {
+        ViewBag.Title = "New Page";
+    }
+    else
+    {
+        ViewBag.Title = $"Page - {Model.PageNumber}";
+    }
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (Model.IsNewCreated)
+{
+    <h2>New Page</h2>
+}
+else
+{
+    <h2>Page - @Model.PageNumber</h2>       
+}
+@using (Html.BeginForm("Save", "InstructionPages", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="form-row">
+        <span id="output">
+            @if (!Model.IsNewCreated)
+            {
+                <img src="@Model.PictureId" class="img-add-company" alt="New Page" />
+            }
+        </span>
+    </div>
+    <hr />
+    <div class="form-group img-upload-car-button">
+        @Html.LabelFor(m => m.Picture.Upload, htmlAttributes: new { @class = "col-form-label col-form-label-sm" })
+        @Html.TextBoxFor(m => m.Picture.Upload, htmlAttributes: new { @type = "file", @class = "form-control-sm", @id = "file", @accept = "image/png" })
+        @Html.ValidationMessageFor(m => m.Picture.Upload)
+        <p></p>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.PartId, htmlAttributes: new { @class = "col-form-label col-form-label-sm" })
+        @Html.DropDownListFor(c => c.PartId, new SelectList(Model.PartDtos, "Id", "Name"), "Select Part", htmlAttributes: new { @class = "form-control form-control-sm" })
+        @Html.ValidationMessageFor(c => c.PartId)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.PageNumber, htmlAttributes: new { @class = "col-form-label col-form-label-sm" })
+        @Html.TextBoxFor(c => c.PageNumber, htmlAttributes: new { @class = "form-control form-control-sm", @type = "number" })
+        @Html.ValidationMessageFor(c => c.PageNumber)
+    </div>
+    @Html.HiddenFor(c => c.Id)
+    @Html.HiddenFor(c => c.PictureId)
+    @Html.HiddenFor(c => c.InstructionId)
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-primary" >Save</button>
+}
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        function clearChild() {
+            var span = document.getElementById('output');
+            while (span.hasChildNodes()) {
+                span.removeChild(span.firstChild);
+            }
+        }
+        function handleFileSelect(evt) {
+            var file = evt.target.files; // FileList object
+            var f = file[0];
+            // Only process image files.
+            if (!f.type.match('image.*')) {
+                alert("Image only please....");
+                return;
+            }
+            var reader = new FileReader();
+            // Closure to capture the file information.
+            reader.onload = (function (theFile) {
+                return function (e) {
+                    // Render thumbnail.
+                    clearChild();
+                    document.getElementById('output').innerHTML = ['<img class="img-add-company" title="', escape(theFile.name), '" src="', e.target.result, '" />'].join('');
+                };
+            })(f);
+            // Read in the image file as a data URL.
+            reader.readAsDataURL(f);
+        }
+        document.getElementById('file').addEventListener('change', handleFileSelect, false);
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+}

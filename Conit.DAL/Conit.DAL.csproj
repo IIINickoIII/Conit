@@ -88,6 +88,10 @@
     <Compile Include="Migrations\202005041918430_IntToStringPictureIdInPartEntity.designer.cs">
       <DependentUpon>202005041918430_IntToStringPictureIdInPartEntity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005051623414_RemoveCascadeDeletingDependensiesBetweenEntities.cs" />
+    <Compile Include="Migrations\202005051623414_RemoveCascadeDeletingDependensiesBetweenEntities.designer.cs">
+      <DependentUpon>202005051623414_RemoveCascadeDeletingDependensiesBetweenEntities.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\EditRepository.cs" />
@@ -110,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005041918430_IntToStringPictureIdInPartEntity.resx">
       <DependentUpon>202005041918430_IntToStringPictureIdInPartEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005051623414_RemoveCascadeDeletingDependensiesBetweenEntities.resx">
+      <DependentUpon>202005051623414_RemoveCascadeDeletingDependensiesBetweenEntities.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -188,10 +188,14 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Api\CompaniesController.cs" />
+    <Compile Include="Controllers\Api\InstructionPagesController.cs" />
+    <Compile Include="Controllers\Api\InstructionsController.cs" />
     <Compile Include="Controllers\Api\PartsController.cs" />
     <Compile Include="Controllers\Api\ProductsController.cs" />
     <Compile Include="Controllers\CompaniesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InstructionPagesController.cs" />
+    <Compile Include="Controllers\InstructionsController.cs" />
     <Compile Include="Controllers\PartsController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -207,6 +211,8 @@
     <Compile Include="ViewModels\Identity\LoginViewModel.cs" />
     <Compile Include="ViewModels\Identity\RegisterViewModel.cs" />
     <Compile Include="ViewModels\Identity\UsersViewModel.cs" />
+    <Compile Include="ViewModels\InstructionPageViewModel.cs" />
+    <Compile Include="ViewModels\InstructionViewModel.cs" />
     <Compile Include="ViewModels\PartViewModel.cs" />
     <Compile Include="ViewModels\ProductViewModel.cs" />
   </ItemGroup>
@@ -221,6 +227,8 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootbox.js" />
+    <Content Include="Scripts\bootbox.min.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -367,10 +375,18 @@
     <Content Include="Views\Products\ProductForm.cshtml" />
     <Content Include="Views\Products\ProductsList.cshtml" />
     <Content Include="Views\Products\ProductsReadOnlyList.cshtml" />
+    <Content Include="Views\Instructions\InstructionDetails.cshtml" />
+    <Content Include="Views\Instructions\InstructionForm.cshtml" />
+    <Content Include="Views\Instructions\InstructionsList.cshtml" />
+    <Content Include="Views\Instructions\InstructionsReadOnlyList.cshtml" />
+    <Content Include="Views\InstructionPages\InstructionPageForm.cshtml" />
+    <Content Include="Views\InstructionPages\InstructionPageDetails.cshtml" />
+    <Content Include="WEBClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Files\Companies\" />
+    <Folder Include="Files\Pages\" />
     <Folder Include="Files\Parts\" />
     <Folder Include="Files\Products\" />
   </ItemGroup>
