@@ -17,3 +17,51 @@
     <h4>@Model.Description</h4>
     <h5>@Model.Category</h5>
 </div>
+@Html.ActionLink("Add part", "New", "PartProduct", routeValues: new { @productId = Model.Id }, htmlAttributes: new { @class = "btn btn-primary" })
+<table id="parts" class="table table-hover">
+    <thead>
+        <tr scope="row">
+            <th>Picture</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Color</th>
+            <th>Material</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var part in Model.PartDtos)
+        {
+            <tr scope="row">
+                <td><img src='@part.PictureId' alt='No image.' class='img-thumbnail-company' /></td>
+                <td>@Html.ActionLink($"{part.Name}", "Details", "Parts", htmlAttributes: null, routeValues: new { partDtoId = part.Id })</td>
+                <td>@part.Description</td>
+                <td>@part.Color</td>
+                <td>@part.Material</td>
+                <td>@Html.ActionLink("Delete", "Delete", "PartProduct", htmlAttributes: null, routeValues: new { partId = part.Id, productId = Model.Id })</td>
+            </tr>
+        }
+    </tbody>
+</table>
+@section scripts{
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#parts').DataTable({
+                columns: [
+                    {
+                        orderable: false
+                    },
+                    {},
+                    {},
+                    {},
+                    {},
+                    {
+                        orderable: false
+                    }
+                ]
+            });
+        });
+    </script>
+}

@@ -1,2 +1,179 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Conit.WEB.ViewModels.CompanyViewModel">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACgAAAAAAgAEAAAAAgQAQAAAAAABAAAAAAAQAAAAA=</HashCode>
+      <FileName>ViewModels\CompanyViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.WEB.ViewModels.InstructionPageViewModel">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BACCgAAACBAAAEAAAAAAAAAABAAAABAAAgAAAQAAAAA=</HashCode>
+      <FileName>ViewModels\InstructionPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.WEB.ViewModels.InstructionViewModel">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAECAAAAAAAgAEAgACAAAAAAAAAAABAAAAAAAQAAAAA=</HashCode>
+      <FileName>ViewModels\InstructionViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.WEB.ViewModels.PartViewModel">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEACgAAABAAgAEAAAAAAAERAACAAABAAAAAAgQAAAAA=</HashCode>
+      <FileName>ViewModels\PartViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.WEB.ViewModels.ProductViewModel">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgCgAAAAAIgAEAAAAAAAAQAAAAAEBAAAAAAAQAACAA=</HashCode>
+      <FileName>ViewModels\ProductViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.WEB.ViewModels.Identity.ChangeRoleViewModel">
+    <Position X="4" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Identity\ChangeRoleViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.WEB.ViewModels.Identity.LoginViewModel">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Identity\LoginViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.WEB.ViewModels.Identity.RegisterViewModel">
+    <Position X="4" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAQAAAAAAAACAAAAAAAAIAA=</HashCode>
+      <FileName>ViewModels\Identity\RegisterViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.WEB.ViewModels.Identity.UsersViewModel">
+    <Position X="2.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABABAA=</HashCode>
+      <FileName>ViewModels\Identity\UsersViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.WEB.Models.FileManager">
+    <Position X="11.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAABAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\FileManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.WEB.Models.Picture">
+    <Position X="9.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Picture.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.WEB.Models.RoleName">
+    <Position X="9.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAABAAAAAAAAAAQAAAAAEQAAAAAgBAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\RoleName.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.WEB.Util.NinjectRegistrations">
+    <Position X="11.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Util\NinjectRegistrations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.WEB.Controllers.Api.CompaniesController">
+    <Position X="21.5" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAABAAAAAAAAAAAEAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Api\CompaniesController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.WEB.Controllers.Api.InstructionPagesController">
+    <Position X="19.5" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAACEAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Api\InstructionPagesController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.WEB.Controllers.Api.InstructionsController">
+    <Position X="17.5" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAEAQAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Api\InstructionsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.WEB.Controllers.Api.PartsController">
+    <Position X="19.5" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAABAAAAAAAAAAAEAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Api\PartsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.WEB.Controllers.Api.ProductsController">
+    <Position X="17.5" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAEAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Api\ProductsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.WEB.Controllers.AccountController">
+    <Position X="28.5" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAABAAAAgAIAAAABAAIAEAAQAAAEAAA=</HashCode>
+      <FileName>Controllers\AccountController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.WEB.Controllers.CompaniesController">
+    <Position X="26.5" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAIAABACAAAAAAAAAAAAEAAAACgAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\CompaniesController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.WEB.Controllers.HomeController">
+    <Position X="26.5" Y="7.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEACAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\HomeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.WEB.Controllers.InstructionPagesController">
+    <Position X="24.5" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAJAAAAABACBAAAAAAAAAACEAQAACgAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\InstructionPagesController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.WEB.Controllers.InstructionsController">
+    <Position X="28.5" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAABACBAAAAAAAAAACEAQAACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\InstructionsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.WEB.Controllers.PartsController">
+    <Position X="26.5" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAJAAAAABACAAAAAAAAAAAAEAAAACgAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\PartsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conit.WEB.Controllers.ProductsController">
+    <Position X="24.5" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAIAABACBAAAAAAAAAAAEAAAACgAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\ProductsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -88,6 +88,7 @@
     <Compile Include="Services\CompanyService.cs" />
     <Compile Include="Services\InstructionPageService.cs" />
     <Compile Include="Services\InstructionService.cs" />
+    <Compile Include="Services\PartProductService.cs" />
     <Compile Include="Services\PartService.cs" />
     <Compile Include="Services\ProductService.cs" />
     <Compile Include="Services\UserService.cs" />

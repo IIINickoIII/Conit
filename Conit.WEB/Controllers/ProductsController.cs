@@ -14,12 +14,15 @@ namespace Conit.WEB.Controllers
 
         private readonly ICompanyService companyService;
 
+        private readonly IPartProductService partProductService;
+
         private FileManager fileManager;
 
-        public ProductsController(IProductService productService, ICompanyService companyService)
+        public ProductsController(IProductService productService, ICompanyService companyService, IPartProductService partProductService)
         {
             this.productService = productService;
             this.companyService = companyService;
+            this.partProductService = partProductService;
             fileManager = new FileManager();
         }
 
@@ -41,6 +44,8 @@ namespace Conit.WEB.Controllers
         {
             var productDto = productService.Get(productDtoId);
             var productViewModel = Mapper.Map<ProductViewModel>(productDto);
+
+            productViewModel.PartDtos = partProductService.GetAllPartsOfProduct(productDtoId);
 
             return View("ProductDetails", productViewModel);
         }

@@ -6,6 +6,7 @@ using Conit.DAL.Entities;
 using Conit.DAL.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace Conit.BLL.Services

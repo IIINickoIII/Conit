@@ -1,5 +1,7 @@
-﻿using Conit.WEB.Models;
+﻿using Conit.BLL.Dto;
+using Conit.WEB.Models;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Conit.WEB.ViewModels
@@ -14,6 +16,8 @@ namespace Conit.WEB.ViewModels
         public Picture Picture { get; set; }
 
         public string PictureId { get; set; }
+
+        public IEnumerable<ProductDto> ProductDtos { get; set; }
 
         public int Id { get; set; }
 

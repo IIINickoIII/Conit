@@ -17,6 +17,8 @@ namespace Conit.WEB.Util
             Bind<IInstructionService>().To<InstructionService>();
 
             Bind<IInstructionPageService>().To<InstructionPageService>();
+
+            Bind<IPartProductService>().To<PartProductService>();
         }
     }
 }

@@ -86,5 +86,10 @@ namespace Conit.BLL.Services
 
             return partDtos;
         }
+
+        public IEnumerable<PartDto> GetAllPartsByProductId(int productDtoId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

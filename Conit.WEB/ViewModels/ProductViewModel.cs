@@ -16,6 +16,8 @@ namespace Conit.WEB.ViewModels
 
         public string PictureId { get; set; }
 
+        public IEnumerable<PartDto> PartDtos {get;set;}
+
         public int Id { get; set; }
 
         [Display(Name = "Name")]

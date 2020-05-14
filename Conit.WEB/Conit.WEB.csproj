@@ -190,12 +190,14 @@
     <Compile Include="Controllers\Api\CompaniesController.cs" />
     <Compile Include="Controllers\Api\InstructionPagesController.cs" />
     <Compile Include="Controllers\Api\InstructionsController.cs" />
+    <Compile Include="Controllers\Api\PartProductController.cs" />
     <Compile Include="Controllers\Api\PartsController.cs" />
     <Compile Include="Controllers\Api\ProductsController.cs" />
     <Compile Include="Controllers\CompaniesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InstructionPagesController.cs" />
     <Compile Include="Controllers\InstructionsController.cs" />
+    <Compile Include="Controllers\PartProductController.cs" />
     <Compile Include="Controllers\PartsController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -213,6 +215,7 @@
     <Compile Include="ViewModels\Identity\UsersViewModel.cs" />
     <Compile Include="ViewModels\InstructionPageViewModel.cs" />
     <Compile Include="ViewModels\InstructionViewModel.cs" />
+    <Compile Include="ViewModels\PartProductViewModel.cs" />
     <Compile Include="ViewModels\PartViewModel.cs" />
     <Compile Include="ViewModels\ProductViewModel.cs" />
   </ItemGroup>
@@ -382,6 +385,7 @@
     <Content Include="Views\InstructionPages\InstructionPageForm.cshtml" />
     <Content Include="Views\InstructionPages\InstructionPageDetails.cshtml" />
     <Content Include="WEBClassDiagram.cd" />
+    <Content Include="Views\PartProduct\PartProductForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

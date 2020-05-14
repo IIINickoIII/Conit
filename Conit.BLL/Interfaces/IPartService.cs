@@ -9,6 +9,8 @@ namespace Conit.BLL.Interfaces
 
         IEnumerable<PartDto> GetAll();
 
+        IEnumerable<PartDto> GetAllPartsByProductId(int productDtoId);
+
         void Add(PartDto partDto);
 
         void Edit(PartDto partDto);

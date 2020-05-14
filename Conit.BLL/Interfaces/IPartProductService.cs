@@ -7,12 +7,14 @@ namespace Conit.BLL.Interfaces
     {
         PartProductDto Get(int partProductDtoId);
 
-        IEnumerable<PartProductDto> GetAll();
+        IEnumerable<PartDto> GetAllPartsOfProduct(int productId);
+
+        IEnumerable<ProductDto> GetAllProductsWithPart(int partId);
 
         void Add(PartProductDto partProductDto);
 
         void Edit(PartProductDto partProductDto);
 
-        void Delete(int partProductDtoId);
+        void Delete(int partId, int productId);
     }
 }

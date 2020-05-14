@@ -1,11 +1,6 @@
 ﻿using Conit.BLL.Interfaces;
 using Conit.WEB.Models;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Hosting;
 using System.Web.Http;
 
@@ -27,6 +22,19 @@ namespace Conit.WEB.Controllers.Api
         public IHttpActionResult GetAll()
         {
             var products = productService.GetAll();
+
+            if (products == null)
+                return NotFound();
+
+            return Ok(products);
+        }
+
+        // GET /api/products?companyId=1
+        [HttpGet]
+        [AllowAnonymous]
+        public IHttpActionResult GetAllByCompanyId(int companyId)
+        {
+            var products = productService.GetAllByCompanyId(companyId);
 
             if (products == null)
                 return NotFound();

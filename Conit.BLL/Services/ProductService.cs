@@ -84,5 +84,20 @@ namespace Conit.BLL.Services
 
             return productDtos;
         }
+
+        public IEnumerable<ProductDto> GetAllByCompanyId(int companyId)
+        {
+            var productsInDb = Database.Products.Find(c => c.CompanyId == companyId);
+
+            if (productsInDb == null)
+            {
+                throw new Exception("No records in Products Table.");
+            }
+
+            var productDtos =
+                Mapper.Map<IEnumerable<ProductDto>>(productsInDb);
+
+            return productDtos;
+        }
     }
 }
