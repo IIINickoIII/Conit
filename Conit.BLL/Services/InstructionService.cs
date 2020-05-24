@@ -87,5 +87,21 @@ namespace Conit.BLL.Services
 
             return instructionDtos;
         }
+
+        public IEnumerable<InstructionDto> GetAllByProductId(int productId)
+        {
+            var instructionsInDb = Database.Instructions
+                .Find(i => i.ProductId == productId);
+
+            if (instructionsInDb == null)
+            {
+                throw new Exception("No records in Instructions Table.");
+            }
+
+            var instructionDtos =
+                Mapper.Map<IEnumerable<InstructionDto>>(instructionsInDb);
+
+            return instructionDtos;
+        }
     }
 }

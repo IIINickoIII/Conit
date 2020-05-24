@@ -16,7 +16,7 @@ namespace Conit.WEB.Controllers.Api
             instructionPageService = serv;
         }
 
-        // GET /api/instructions
+        // GET /api/instructionpages
         [HttpGet]
         [AllowAnonymous]
         public IHttpActionResult GetAll()
@@ -29,7 +29,7 @@ namespace Conit.WEB.Controllers.Api
             return Ok(instructionPages);
         }
 
-        // GET /api/instructions/1
+        // GET /api/instructionpages?instructionId=1
         [HttpGet]
         [AllowAnonymous]
         public IHttpActionResult Get(int instructionId)
@@ -43,7 +43,7 @@ namespace Conit.WEB.Controllers.Api
             return Ok(instructionPageDtos);
         }
 
-        // DELETE /api/instructions/1
+        // DELETE /api/instructionpages/1
         [HttpDelete]
         public IHttpActionResult Delete(int id)
         {

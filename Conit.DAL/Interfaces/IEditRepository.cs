@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Conit.DAL.Interfaces
+﻿namespace Conit.DAL.Interfaces
 {
     public interface IEditRepository<TEntity> where TEntity : class
     {

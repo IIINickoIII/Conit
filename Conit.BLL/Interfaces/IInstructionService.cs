@@ -9,6 +9,8 @@ namespace Conit.BLL.Interfaces
 
         IEnumerable<InstructionDto> GetAll();
 
+        IEnumerable<InstructionDto> GetAllByProductId(int productId);
+
         void Add(InstructionDto instructionDto);
 
         void Edit(InstructionDto instructionDto);

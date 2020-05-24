@@ -94,7 +94,8 @@ namespace Conit.BLL.Services
         {
             var instructionPagesInDb = Database.InstructionPages
                 .GetAll()
-                .Where(p => p.InstructionId == instructionId);
+                .Where(p => p.InstructionId == instructionId)
+                .OrderBy(p => p.PageNumber);
 
             if (instructionPagesInDb == null)
             {

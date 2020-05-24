@@ -40,6 +40,19 @@ namespace Conit.WEB.Controllers.Api
             return Ok(instructionDto);
         }
 
+        // GET /api/instructions?productId=1
+        [HttpGet]
+        [AllowAnonymous]
+        public IHttpActionResult GetInstrucitonsByProductId(int productId)
+        {
+            var instructions = instructionService.GetAllByProductId(productId);
+
+            if (instructions == null)
+                return NotFound();
+
+            return Ok(instructions);
+        }
+
         // DELETE /api/instructions/1
         [HttpDelete]
         public IHttpActionResult Delete(int id)
